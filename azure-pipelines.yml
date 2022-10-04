@@ -67,7 +67,7 @@ stages:
       artifact: drop
 
 - stage: 'Dev'
-  displayName: 'Deploy the dev environment'
+  displayName: 'Deploy the desarrollo environment'
   dependsOn: Build
   condition: |
     and
@@ -79,7 +79,7 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: dev
+    environment: desarrollo
     variables:
     - group: Release
     strategy:
